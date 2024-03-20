@@ -387,7 +387,7 @@ nav h3 {
 }
 
 .swiper-slide {
-    width: 30%;
+    width: 60%;
     border-left: 1px solid #aeadad;
     padding: 0 2vw;
 }
@@ -647,7 +647,7 @@ nav h3 {
     animation-delay: 2s;
 }
 #loader h1:nth-child(3){
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes load {
