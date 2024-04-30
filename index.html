@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Maestros🚀</title>
+    <title>Sundown Studio</title>
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -23,28 +23,27 @@
 
         <div id="page1">
             <nav>
-                <img src="home.svg"
+                <img src="home.svg" id="home"
                     alt="">
                 <div id="nav-part2">
-                    <h4><a href="#">About</a></h4>
-                    <h4><a href="https://www.instagram.com/marketingmaestrosclub">Socials</a></h4>
+                    <h4><a href="#bottom-part2">About</a></h4>
+                    <h4><a href="https://www.instagram.com/marketingmaestrosclub" target="_blank">Socials</a></h4>
                     <h4><a href="#">Contact</a></h4>
                 </div>
+                <img src="moon.png" id="icon">
                 <h3>Menu</h3>
             </nav>
             <div id="center">
                 <div id="left">
                     <h3>Unleashing the Power of Marketing |
-                        Think you got the idea? We’ve got the skills to advertise it!</h3>
+                        Think you got the idea? We’ve got the skills to advertise it!!</h3>
                 </div>
                 <div id="right">
                     <h1>Empowering brands, Inspiring Minds <br>
                         🚀<br>
                         </h1>
                 </div>
-
             </div>
-            
             
         </div>
         <div id="page2">
@@ -76,11 +75,9 @@
             </div>
             <div id="page2-bottom">
                 <div id="bottom-part2">
-                    <img src="mrkt maestro.png"
-                        alt="">
+                    <img src="mrkt maestro.png" alt="">
                 </div>
                 <h1>To Be Written By Content Writer</h1>
-                
             </div>
             <div id="gooey">
 
@@ -159,9 +156,35 @@
 
         </div>
     </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      </script>
+      
+    <script>
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src="sun.png";
+                home.src="dark home.svg";
+            }else{
+                icon.src="moon.png";
+                home.src="home.svg";
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 
 </html>

@@ -21,7 +21,14 @@
     box-sizing: border-box;
     font-family: neu;
 }
-
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+.dark-theme{
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+}
 html, body {
     height: 100%;
     width: 100%;
@@ -36,7 +43,7 @@ html, body {
 #page1 {
     min-height: 100vh;
     width: 100%;
-    background-color: #EFEAE3;
+    background-color: var(--primary-color);
     position: relative;
     padding: 0 2vw;
 }
@@ -54,16 +61,22 @@ nav {
 
 #nav-part2 {
     display: flex;
-    align-items: center;
-    gap: 1vw;
+    
+    align-items: right;
+    gap: 3vw;
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
 }
 
 #nav-part2 h4 {
     padding: 10px 20px;
-    border: 1px solid #0000003c;
+    border: 1px solid var(--secondary-color);
     border-radius: 50px;
     font-weight: 500;
-    color: #000000bb;
+    color: var(--primary-color);
     transition: all ease 0.4s;
     position: relative;
     font-size: 18px;
@@ -75,7 +88,7 @@ nav {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: var(--secondary-color);
     left: 0;
     bottom: -100%;
     border-radius: 50%;
@@ -88,14 +101,14 @@ nav {
 }
 
 #nav-part2 h4 a {
-    color: #000000bb;
+    color: var(--secondary-color);
     text-decoration: none;
     position: relative;
     z-index: 9;
 }
 
 #nav-part2 h4:hover a {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 nav h3 {
@@ -109,17 +122,19 @@ nav h3 {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border-bottom: 1px solid #0000003c;
+    border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 2.5vw;
 }
 
 #left h3 {
+    color: var(--secondary-color);
     width: 25vw;
     font-size: 1.8vw;
     line-height: 2vw;
 }
 
 #center h1 {
+    color: var(--secondary-color);
     font-size: 10vw;
     text-align: right;
     line-height: 8vw;
@@ -202,7 +217,7 @@ nav h3 {
 #page2 {
     min-height: 100vh;
     width: 100%;
-    background-color: #EFEAE3;
+    background-color: var(--primary-color);
     padding: 8vw 0;
     position: relative;
 }
@@ -217,6 +232,7 @@ nav h3 {
 }
 
 .con {
+    color: var(--secondary-color);
     white-space: nowrap;
     display: inline-block;
     animation-name: move;
@@ -251,6 +267,7 @@ nav h3 {
 }
 
 #page2-bottom {
+    color: var(--secondary-color);
     height: 80vh;
     width: 100%;
     /* background-color: aliceblue; */
@@ -322,7 +339,7 @@ nav h3 {
 #page3 {
     min-height: 100vh;
     width: 100%;
-    background-color: #EFEAE3;
+    background-color: var(--primary-color);
     padding: 4vw 0;
 }
 
@@ -330,8 +347,8 @@ nav h3 {
     height: 150px;
     width: 100%;
     position: relative;
-
-    border-bottom: 1px solid #38383864;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -377,7 +394,7 @@ nav h3 {
 #page4 {
     height: 70vh;
     width: 100%;
-    background-color: #EFEAE3;
+    background-color: var(--primary-color);
     padding: 10vw 2vw;
 }
 
@@ -387,8 +404,9 @@ nav h3 {
 }
 
 .swiper-slide {
+    color: var(--secondary-color);
     width: 60%;
-    border-left: 1px solid #aeadad;
+    border-left: 1px solid var(--secondary-color);
     padding: 0 2vw;
 }
 
@@ -402,8 +420,8 @@ nav h3 {
     position: fixed;
     height: 105vh;
     width: 100%;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     z-index: 9;
     bottom: 0;
     display: flex;
@@ -414,7 +432,7 @@ nav h3 {
 }
 
 #footer h1 {
-    font-size: 23vw;
+    font-size: 15vw;
 }
 
 #footer-div {
@@ -424,7 +442,7 @@ nav h3 {
 }
 
 #footer-bottom {
-    border-top: 1px solid #dadada;
+    border-top: 1px solid var(--primary-color);
     height: 10vh;
     width: 100%;
 }
@@ -432,7 +450,7 @@ nav h3 {
 #full-scr {
     height: 100vh;
     width: 100%;
-    background-color: #00000070;
+    background-color: var(--secondary-color);
     position: fixed;
     z-index: 99;
     top: -100%;
@@ -442,13 +460,14 @@ nav h3 {
 #full-div1 {
     height: 50%;
     width: 100%;
-    background-color: #EFEAE3;
+    background-color: var(--primary-color);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
 }
 
 @media (max-width:600px) {
+    
 
     #page1 {
         min-height: 100vh;
@@ -458,7 +477,7 @@ nav h3 {
 
     nav {
         padding: 8vw 5vw;
-        background-color: #EFEAE3;
+        background-color: var(--primary-color);
         /* padding: 0 5vw; */
     }
 
@@ -471,24 +490,31 @@ nav h3 {
         display: none;
     }
 
+    #icon{
+        width: 30px;
+        height: inherit;
+        cursor: pointer;
+    }
+    
+
     nav h3 {
         display: block;
         padding: 3vw 5vw;
-        border: 1px solid #ababab;
+        border: 1px solid var(--primary-color);
         border-radius: 50px;
-        font-size: 4vw;
-        font-weight: 200;
+        font-size: 1vw;
+        font-weight: 20;
         padding-left: 10vw;
     }
 
     #center {
         height: 62vh;
         width: 100%;
-        /* background-color: orange; */
+        color: var(--secondary-color); 
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        border-bottom: 1px solid #0000003c;
+        border-bottom: 1px solid var(--secondary-color);;
         padding: 7vw 5vw;
         padding-bottom: 10vw;
         flex-direction: column-reverse;
@@ -503,8 +529,9 @@ nav h3 {
     }
 
     #center h1 {
+        color: var(--secondary-color);;
         font-size: 17vw;
-        text-align: right;
+        text-align: left;
         line-height: 15vw;
     }
 
@@ -522,7 +549,7 @@ nav h3 {
     #page2 {
         min-height: 100vh;
         width: 100%;
-        background-color: #EFEAE3;
+        background-color: var(--primary-color);
         padding: 8vw 0;
         position: relative;
     }
@@ -625,7 +652,7 @@ nav h3 {
     position: fixed;
     z-index: 999;
     top: 0;
-    transition: all ease 0.7s;
+    transition: all ease 1s;
     display: flex;
     align-items: center;
     justify-content: center;
