@@ -1,0 +1,28 @@
+{
+  "name": "marketing-maestros-website",
+  "version": "1.0.0",
+  "description": "Marketing Maestros - Dynamic student club website at the Institute of Innovation in Technology and Management",
+  "main": "script.js",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANIRUDH-Main/Marketing-Maestros.git"
+  },
+  "keywords": [
+    "marketing",
+    "student-club",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANIRUDH-Main/Marketing-Maestros/issues"
+  },
+  "homepage": "https://github.com/ANIRUDH-Main/Marketing-Maestros#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
